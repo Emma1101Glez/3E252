@@ -1,0 +1,26 @@
+@startuml
+Class Humano
+Class Estado
+class Foco{
+    -Estado estado
+    +Encendido()
+    +Apagado()
+    +Estado : MostrarEstado()
+}
+
+Class SerieNavidad{
+    - Foco focos[10]
+    +Encendido()
+    +Apagado()
+    +ImprimirSerie()
+}
+
+Humano o-- Foco
+Foco *-- Estado
+Estado --|> bool
+Humano o-- SerieNavidad
+SerieNavidad "1" *-- "10" Foco 
+
+@enduml
+
+10objetos del tipo foco en serienavisa
