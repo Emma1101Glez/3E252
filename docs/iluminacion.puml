@@ -3,24 +3,22 @@ Class Humano
 Class Estado
 class Foco{
     -Estado estado
-    +Encendido()
-    +Apagado()
+    +Encender()
+    +Apagar()
     +Estado : MostrarEstado()
 }
 
 Class SerieNavidad{
     - Foco focos[10]
-    +Encendido()
-    +Apagado()
+    +Encender()
+    +Apagar()
     +ImprimirSerie()
 }
 
 Humano o-- Foco
 Foco *-- Estado
 Estado --|> bool
-Humano o-- SerieNavidad
 SerieNavidad "1" *-- "10" Foco 
+Humano o-- SerieNavidad
 
 @enduml
-
-10objetos del tipo foco en serienavisa
